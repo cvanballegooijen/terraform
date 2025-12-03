@@ -70,7 +70,7 @@ variable "tags" {
 variable "aap_eventstream_url" {
   description = "The URL of the AAP Event Stream"
   type        = string
-  default     = "https://caap.fvz.ansible-labs.de:443/eda-event-streams/api/eda/v1/external_event_stream/b0c1ea56-e512-4e24-adcc-3d31ddca336d/post/"
+  default     = "https://caap.fvz.ansible-labs.de:443/eda-event-streams/api/eda/v1/external_event_stream/2bed8d2b-cb24-4e6b-b2b2-39533545c544/post/"
 }
 
 # Variable to store the AAP details
