@@ -9,12 +9,6 @@ data "aap_job_template" "deploy_web_site" {
 }
 
 
-# Create some infrastructure - inventory group - that has an action tied to it
-resource "aap_group" "tfademo" {
-  name = "role_webserver"
-  inventory_id = aap_inventory.inventory.id
-}
-
 resource "aap_job" "deploy_web_server" {
   inventory_id = aap_inventory.inventory.id
   job_template_id = data.aap_job_template.deploy_web_server.id

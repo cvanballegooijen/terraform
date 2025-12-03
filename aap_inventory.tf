@@ -1,14 +1,3 @@
-data "aap_job_template" "deploy_web_server" {
-  name              = "Deploy Web Server"
-  organization_name = var.organization_name
-}
-
-data "aap_job_template" "deploy_web_site" {
-  name              = "Deploy Web Site"
-  organization_name = var.organization_name
-}
-
-
 resource "aap_inventory" "inventory" {
   name         = "${var.instance_name_prefix}-aap-inventory"
   description  = "A new inventory"
