@@ -9,8 +9,8 @@ action "aap_eda_eventstream_post" "create" {
     event_stream_config = {
       url = var.aap_eventstream_url
       insecure_skip_verify = true
-      username = "cojan"
-      password = "r3dh4t1!"
+      username = "aap"
+      password = "aap"
     }
   }
 }
