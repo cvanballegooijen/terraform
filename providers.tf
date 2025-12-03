@@ -23,7 +23,3 @@ provider "aws" {
   }
 }
 
-# Configure the AAP Provder
-provider "aap" {
- timeout = 10
-}
