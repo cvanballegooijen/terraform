@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    aap = {
+      source  = "ansible/aap"
+      version = "1.4.0"
+    }
   }
 }
 
@@ -19,4 +23,7 @@ provider "aws" {
   }
 }
 
-
+# Configure the AAP Provder
+provider "aap" {
+ timeout = 10
+}
