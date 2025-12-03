@@ -34,7 +34,7 @@ resource "aap_job" "deploy_web_site" {
   }
 
   depends_on = [
-    aap_job.deploy_webserver
+    aap_job.deploy_web_server
   ]
 }
 
