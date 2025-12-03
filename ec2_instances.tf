@@ -14,20 +14,20 @@ resource "aws_instance" "web_server" {
   vpc_security_group_ids      = [aws_security_group.this.id]
   key_name                    = var.ssh_key_name
   associate_public_ip_address = true
-  
+
   tags = merge(
     var.tags,
     {
       Name        = "${var.instance_name_prefix}-web-server-${count.index+1}"
     }
   )
-#  lifecycle {
+  lifecycle {
     # This action triggers syntax new in terraform
     # It configures terraform to run the listed actions based
     # on the named lifecycle events: "After creating this resource, run the action"
-#    action_trigger {
-#      events  = [after_create]
-#      actions = [action.aap_eda_eventstream_post.create]
-#    }
-#  }
+    action_trigger {
+      events  = [after_create]
+      actions = [action.aap_eda_eventstream_post.create]
+    }
+  }
 }
