@@ -4,7 +4,7 @@ data "aap_job_template" "deploy_web_server" {
 }
 
 data "aap_job_template" "deploy_web_site" {
-  name              = "Deploy Web Site"
+  name              = "Deploy Website"
   organization_name = var.organization_name
 }
 
